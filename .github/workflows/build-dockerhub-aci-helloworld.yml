@@ -13,8 +13,8 @@ jobs:
     - uses: actions/checkout@v1
     - name: Build the Docker image
       env:
-        DOCKER_HUB: ${{ secrets.DOCKER_HUB }}
-        DOCKER_HUB_SECRET: ${{ secrets.DOCKER_HUB_SECRET }}
+        DOCKER_HUB: ${{ secrets.ACR_NAME }}
+        DOCKER_HUB_SECRET: ${{ secrets.ACR_NAME }}
       run: |
         ls -l
         cd apps/aci-helloworld
